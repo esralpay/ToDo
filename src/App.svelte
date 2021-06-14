@@ -35,7 +35,7 @@
 </script>
 
 <main>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> -->
    
     <div class="todoContainer">
         <h1>TO DO LIST</h1>
@@ -65,12 +65,12 @@
                 <div class="buttons">
                     <button
                         class="deleteButton"
-                        on:click={() => deleteObj(toDo)}><i class="fas fa-trash-alt"></i></button>
+                        on:click={() => deleteObj(toDo)}>Delete</button>
                     <button class="updateButton" on:click={() => updateObj(toDo)}>
                         {#if toDo.isUpdate}
-                        <i class="fas fa-check"></i>
+                        "Confirm"
                         {:else}
-                        <i class="fas fa-pen"></i>
+                        "Update"
                         {/if}
                     </button>
                 </div>
