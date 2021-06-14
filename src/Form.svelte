@@ -11,14 +11,25 @@
         }
         console.log(toDo);
         dispatch("addtoDo",toDo);
+        name = "";
+        details="";
     }; 
 
 </script>
-<form on:submit|preventDefault ={handleSubmit}>
+<form class="form" on:submit|preventDefault ={handleSubmit}>
     <input type="text" placeholder="to do" bind:value={name}>
     <input type="text" placeholder="details" bind:value={details}>
-    <button>Add</button>
+    <button class="addButton">Add</button>
+    
 </form>
 <style>
+    .addButton{
+        width:80px;
+    }
+    .form{
+
+        margin-top: 50px;
+        margin-bottom: 50px;        
+    }
 
 </style>
