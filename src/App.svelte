@@ -68,9 +68,9 @@
                         on:click={() => deleteObj(toDo)}>Delete</button>
                     <button class="updateButton" on:click={() => updateObj(toDo)}>
                         {#if toDo.isUpdate}
-                        "Confirm"
+                        Confirm
                         {:else}
-                        "Update"
+                        Update
                         {/if}
                     </button>
                 </div>
