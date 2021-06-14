@@ -3,18 +3,7 @@
     //document.body.style.backgroundColor = "red";
     document.body.style.backgroundImage = "url('https://i.ibb.co/B4Lnjky/todoBG.jpg')";
 
-    $: toDos = JSON.parse(localStorage.getItem("localTodo")) ||  JSON.parse(localStorage.getItem("used")) ? [] : [
-        {
-            name: "Calculate",
-            details: "The measurement of Milan and Suburbs",
-        },
-        {
-            name: "Ask",
-            details: "Benedetto Potinari (A Florentine Merchant) by what means they go on ice in Flanders",
-        }
-    ];
-    localStorage.setItem("used", true);
-
+    $: toDos = JSON.parse(localStorage.getItem("localTodo")) || [];
    
     const updateStorage = () => {
         localStorage.setItem("localTodo", JSON.stringify(toDos));
