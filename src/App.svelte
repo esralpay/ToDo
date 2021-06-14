@@ -3,7 +3,7 @@
     //document.body.style.backgroundColor = "red";
     document.body.style.backgroundImage = "url('https://i.ibb.co/B4Lnjky/todoBG.jpg')";
 
-    $: toDos = JSON.parse(localStorage.getItem("localTodo"));
+    $: toDos = JSON.parse(localStorage.getItem("localTodo")) || [];
    
     const updateStorage = () => {
         localStorage.setItem("localTodo", JSON.stringify(toDos));
@@ -35,7 +35,7 @@
 </script>
 
 <main>
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
    
     <div class="todoContainer">
         <h1>TO DO LIST</h1>
@@ -65,12 +65,12 @@
                 <div class="buttons">
                     <button
                         class="deleteButton"
-                        on:click={() => deleteObj(toDo)}>Delete</button>
+                        on:click={() => deleteObj(toDo)}><i class="fas fa-trash-alt"></i></button>
                     <button class="updateButton" on:click={() => updateObj(toDo)}>
                         {#if toDo.isUpdate}
-                        Confirm
+                        <i class="fas fa-check"></i>
                         {:else}
-                        Update
+                        <i class="fas fa-pen"></i>
                         {/if}
                     </button>
                 </div>
