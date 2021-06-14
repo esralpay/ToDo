@@ -124,11 +124,13 @@
     .name {
         margin-left: 20px;
         width: 200px;
+        word-break: break-word;
     }
     .details {
         flex: 1 1 0;
         min-width: 200px;
         margin-left: 20px;
+        word-break: break-word;
     }
     .buttons {
         display: flex;
